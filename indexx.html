@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quincho Doña Juanita</title>
+        <link rel="icon" href="img/Icon.png" type="image/png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Reservas Quincho Doña Juanita</h1>
+            <p>El lugar ideal para pasar el finde semana.</p>
+        </header>
+
+        <div class="carrusel-contenedor">
+            <div class="carrusel-pantalla">
+                <div class="carrusel-slide activa">
+                    <img src="img/1.1.jpg" alt="Vista del Quincho 1">
+                </div>
+
+                <div class="carrusel-slide">
+                    <img src="img/1.2.jpg" alt="Vista del Quincho 2">
+                </div>
+
+                <div class="carrusel-slide">
+                    <img src="img/1.3.jpg" alt="Vista del Quincho 3">
+                </div>
+
+                <button type="button" class="carrusel-btn prev" onclick="cambiarSlide(-1)">&#10094;</button>
+                <button type="button" class="carrusel-btn next" onclick="cambiarSlide(1)">&#10095;</button>
+
+            </div>
+        </div>
+
+        <main class="container">
+            <section class="info-quincho">
+                <h2>Características del Espacio</h2>
+                <ul>
+                    <li>Parrilla grande con herrajes regulables</li>
+                    <li>Capacidad para 30 perosnas sentadas</li>
+                    <li>Freezer y mesa más asientos</li>
+                    <li>Pileta de 2 metros</li>
+                    <li>Castillo inflable</li>
+                    <li>Cama elastica</li>
+                    <li>Baño hombre & mujer</li>
+                    <li>Baño adaptado para personas con movilidad reducida</li>
+                    
+                </ul>
+            </section>
+
+            <section>
+                <h2>Formulario de Reserva</h2>
+                <form id="formReserva">
+                    <div class="grupo-input">
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" id="nombre" required placeholder="Ingresar nombre...">
+                    </div>
+
+                    <div class="grupo-input">
+                        <label for="telefono">Número de Teléfono:</label>
+                        <input type="tel" id="telefono" required placeholder="3624....">
+                    </div>
+
+                    <div class="grupo-input">
+                        <label for="fecha">Selecciona la Fecha:</label>
+                        <input type="date" id="fecha" required>
+                    </div>
+
+                    <div class="grupo-input">
+                        <label for="turno">Turno:</label>
+                        <select id="turno" required>
+                            <option value="">Selecciona un turno</option>
+                            <option value="Mañana(08:00 a 14:00)">Mañana (08:00 a 14:00)</option>
+                            <option value="Tarde(16:00 a 22:00)">Tarde (16:00 a 22:00)</option>
+                            <option value="Noche(00:00 a 06:00)">Noche (00:00 a 06:00)</option>
+                        </select>
+                    </div>
+
+                    <div class="grupo-input">
+                        <label for="metodoPago">Método de Pago:</label>
+                        <select id="metodoPago" required>
+                            <option value="">Selecciona un método de pago</option>
+                            <option value="Efectivo">Efectivo</option>
+                            <option value="Transferencia">Transferencia</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" id="btnReservar">Confirmar Reserva</button>
+                </form>
+
+                <div id="mensaje" class="oculto"></div>
+            </section>
+        </main>
+        <section class="seccion-mapa">
+            <h2>Cómo llegar al Quincho</h2>
+            <div class="contenedor-iframe">
+               <a href="https://www.google.com/maps/place/Quinchos+Do%C3%B1a+juanita/@-27.3769126,-59.0527192,18z/data=!4m16!1m9!4m8!1m0!1m6!1m2!1s0x944509004a4c74e9:0xa92bf5561c2b624d!2sQuinchos+Do%C3%B1a+juanita,+Libertad,+Chaco!2m2!1d-59.053015!2d-27.3769234!3m5!1s0x944509004a4c74e9:0xa92bf5561c2b624d!8m2!3d-27.3769234!4d-59.053015!16s%2Fg%2F11lzm4_y42?authuser=0&entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D" 
+                    target="_blank" class="enlace-mapa-estatico">
+                    <img src="img/mapa.jpg" alt="Mapa de ubicación de Puerto Tirol" class="imagen-mapa-fija" style="background-color: #e0e0e0; min-height: 350px;"">
+                    <div class="capa-hover-mapa">
+                        <span>📍 Hacer clic para ver la ubicación en Google Maps</span>
+                    </div>  
+               </a>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-container">
+                <!-- Columna 1: Información del Quincho -->
+                <div class="footer-columna">
+                    <h3>Quincho Doña Juanita</h3>
+                    <p>El lugar perfecto para tus eventos familiares, cumpleaños y reuniones de fin de semana.</p>
+                    <p>📍 Puerto Tirol, Chaco</p>
+                </div>
+
+                <!-- Columna 2: Redes Sociales -->
+                <div class="footer-columna">
+                    <h3>Seguinos en Redes</h3>
+                    <ul class="footer-redes">
+                        <li><a href="https://instagram.com" target="_blank">📸 Instagram</a></li>
+                        <li><a href="https://facebook.com" target="_blank">👥 Facebook</a></li>
+                        <li><a href="https://wa.me" target="_blank">💬 WhatsApp</a></li>
+                    </ul>
+                </div>
+                <!-- Columna 3: Créditos del Desarrollador -->
+                <div class="footer-columna">
+                    <h3>Desarrollo Web</h3>
+                    <p>Sitio diseñado e implementado por:</p>
+                    <a href="#" class="credito-desarrollador" target="_blank"><strong>GF-Servicios Digitales</strong></a>
+                    <p class="copyright">&copy; 2026 Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+
+        <div id="lightbox" class="lightbox oculto">
+            <span class="lightbox-cerrar" onclick="cerrarLightbox()">&times;</span>
+            <button type="button" class="lightbox-btn prev" onclick="cambiarSlideLightbox(-1)">&#10094;</button>
+            <img id="lightbox-img" src="" alt="Vista ampliada">
+            <button type="button" class="lightbox-btn next" onclick="cambiarSlideLightbox(1)">&#10095;</button>
+        </div>
+
+        <script src="scripts.js"></script>
+    </body>
